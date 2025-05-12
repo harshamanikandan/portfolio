@@ -319,61 +319,6 @@ img {
     margin-bottom: 1.5rem;
     color: #1e293b;
 }
-/* === Responsive fixes for Projects and Things I Love === */
-
-/* Make flex layout stack on smaller screens */
-@media screen and (max-width: 768px) {
-  .work__img {
-    width: 100% !important;
-    margin-bottom: 1.5rem;
-  }
-}
-
-/* Default layout for .work__container */
-.work__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-/* Project cards */
-.work__img {
-  flex: 1 1 45%;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.work__img:hover {
-  transform: translateY(-5px);
-}
-
-/* Image inside each project */
-.work__img img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* Project titles and descriptions */
-.project-title {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: #1e3a8a;
-}
-
-.project-description {
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 0.3rem;
-  text-align: center;
-  padding: 0 1rem;
-}
 
 
 /* Internship container - make it wider */
@@ -668,4 +613,30 @@ img {
   .home__img {
     width: 450px;
   }
+}
+@media screen and (max-width: 768px) {
+    .work__container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem; /* Add horizontal padding */
+        box-sizing: border-box;
+    }
+
+    .work__img {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 1.05rem;
+    }
 }
